@@ -21,18 +21,26 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
-
 body {
-    font-family: 'Roboto', sans-serif;
-    color: #fff;
-    background-color: #111;
-    overflow-x: hidden;
-    line-height: 1.6;
-    background-image: url('https://hips.hearstapps.com/hmg-prod/images/hbz-042517-oldhollywood-1493167401.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    margin: 0;
+    height: 100%; /* Set height to allow content to determine scrollability */
+    background-image: url('0-modified.jpg'); /* Replace with your image URL */
+    background-repeat: repeat-x; /* Repeats the image horizontally */
+    background-size: cover; /* Adjusts the image to fit the screen */
+    background-attachment: fixed; /* Keeps the background fixed relative to the viewport */
+    background-position: 0 0;
+    animation: moveBackground 30s linear infinite; /* Animation for smooth horizontal scrolling */
 }
+
+@keyframes moveBackground {
+    from {
+        background-position: 0 0; /* Start position of the image */
+    }
+    to {
+        background-position: -6000px 0; /* Move the image left by its width */
+    }
+}
+
 
 h1, h2, h3, p {
     margin-bottom: 1rem;
